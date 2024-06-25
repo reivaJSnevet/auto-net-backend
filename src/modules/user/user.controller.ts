@@ -10,7 +10,7 @@ import {
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { User } from '@prisma/client';
+import { User } from 'src/schemas/user.schema';
 
 @Controller('users')
 export class UserController {
@@ -23,7 +23,7 @@ export class UserController {
 
   @Get(':id')
   async getUserById(@Param('id') id: string): Promise<User> {
-    return this.userService.getUserById(Number(id));
+    return this.userService.getUserById(id);
   }
 
   @Post()
@@ -36,11 +36,11 @@ export class UserController {
     @Param('id') id: string,
     @Body() data: UpdateUserDto,
   ): Promise<User> {
-    return this.userService.updateUser(Number(id), data);
+    return this.userService.updateUser(id, data);
   }
 
   @Delete(':id')
   async deleteUser(@Param('id') id: string) {
-    return this.userService.deleteUser(Number(id));
+    return this.userService.deleteUser(id);
   }
 }
