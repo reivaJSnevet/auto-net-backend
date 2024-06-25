@@ -1,0 +1,225 @@
+[
+    {
+        "_id": "3e9a2dc1-d0d1-4db6-b37f-5a3881268f1d",
+        "colId": "history",
+        "containerId": "",
+        "name": "htpp://localhost:3000",
+        "url": "htpp://localhost:3000",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T03:17:55.077Z",
+        "modified": "2024-06-25T03:17:55.077Z",
+        "headers": []
+    },
+    {
+        "_id": "b118cbb7-4dfc-4bec-ba9b-3f4dedd1dd1a",
+        "colId": "history",
+        "containerId": "",
+        "name": "htpp://localhost:3000/users",
+        "url": "htpp://localhost:3000/users",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T03:18:00.700Z",
+        "modified": "2024-06-25T03:18:00.700Z",
+        "headers": []
+    },
+    {
+        "_id": "11347f22-b1d7-4623-ab76-6255164b7c46",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/users",
+        "url": "http://localhost:3000/users",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T03:18:41.759Z",
+        "modified": "2024-06-25T03:18:41.759Z",
+        "headers": []
+    },
+    {
+        "_id": "77846291-5354-4bfd-8b78-c009be6faa7b",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/users",
+        "url": "http://localhost:3000/users",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2024-06-25T03:19:43.233Z",
+        "modified": "2024-06-25T03:19:43.233Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"email\":\"\",\n  \"name\":\"\",\n  \"password\":\"\",\n  \"role\":\"\"\n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "503b6174-e5a6-4b18-a27b-1e43ad889887",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products",
+        "url": "http://localhost:3000/products",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T04:06:16.564Z",
+        "modified": "2024-06-25T04:38:10.862Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n \n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "ecf66b0b-4c78-4281-a35e-e1eeb1616bf2",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products",
+        "url": "http://localhost:3000/products",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2024-06-25T04:07:03.624Z",
+        "modified": "2024-06-25T04:42:10.749Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\":\"Laptop Hp rex\",\n  \"description\":\"Un pc portatil \",\n  \"price\": 131231,\n  \"stock\": 3\n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "746159ec-5a6e-42f7-9946-59a5c2fef6b1",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products/667a42b7d6848b2381e6f16c",
+        "url": "http://localhost:3000/products/667a42b7d6848b2381e6f16c",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T04:08:51.687Z",
+        "modified": "2024-06-25T04:09:24.343Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\":\"Laptop Hp rex\",\n  \"description\":\"Un pc portatil\",\n  \"price\":\"20000000\",\n  \"stock\":\"2\"\n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "09b15771-97a9-4c4d-aa64-4af2c83c57da",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products/667a42b7d6848b2381e6f16a",
+        "url": "http://localhost:3000/products/667a42b7d6848b2381e6f16a",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T04:08:54.230Z",
+        "modified": "2024-06-25T04:08:54.230Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\":\"Laptop Hp rex\",\n  \"description\":\"Un pc portatil\",\n  \"price\":\"20000000\",\n  \"stock\":\"2\"\n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "5058779a-4f52-4232-a874-356cce20fdfa",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products/667a42b7d6848b2381e6f16c",
+        "url": "http://localhost:3000/products/667a42b7d6848b2381e6f16c",
+        "method": "PUT",
+        "sortNum": 0,
+        "created": "2024-06-25T04:09:10.764Z",
+        "modified": "2024-06-25T04:09:21.487Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\":\"Laptop Hp rex\",\n  \"description\":\"Un pc portatil\",\n  \"price\":\"20000000\",\n  \"stock\":\"2\"\n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "1fdd1198-2e16-414b-8195-dace57af6cce",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products/667a42b7d6848b2381e6f16c",
+        "url": "http://localhost:3000/products/667a42b7d6848b2381e6f16c",
+        "method": "DELETE",
+        "sortNum": 0,
+        "created": "2024-06-25T04:09:30.792Z",
+        "modified": "2024-06-25T04:09:30.792Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\":\"Laptop Hp rex\",\n  \"description\":\"Un pc portatil\",\n  \"price\":\"20000000\",\n  \"stock\":\"2\"\n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "7277ed3f-afb3-4281-a1d1-47551c08eedb",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products/1",
+        "url": "http://localhost:3000/products/1",
+        "method": "DELETE",
+        "sortNum": 0,
+        "created": "2024-06-25T04:21:37.067Z",
+        "modified": "2024-06-25T04:21:37.067Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\":\"Laptop Hp rex\",\n  \"description\":\"Un pc portatil\",\n  \"price\":\"20000000\",\n  \"stock\":\"2\"\n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "5da050fe-b78e-4258-869d-1c9ba44dcab2",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products/2",
+        "url": "http://localhost:3000/products/2",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T04:37:46.400Z",
+        "modified": "2024-06-25T04:37:46.400Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n \n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "d549276f-5add-4b49-bb67-528c8462390e",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products/667a430ad6848b2381e6f17b",
+        "url": "http://localhost:3000/products/667a430ad6848b2381e6f17b",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T04:38:16.104Z",
+        "modified": "2024-06-25T04:38:16.104Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n \n}",
+            "form": []
+        }
+    },
+    {
+        "_id": "a9440cdd-275b-43ae-8e9e-5ffb8ca75a23",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://localhost:3000/products/667a430ad6848b2381e6f17",
+        "url": "http://localhost:3000/products/667a430ad6848b2381e6f17",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-06-25T04:38:19.613Z",
+        "modified": "2024-06-25T04:38:19.613Z",
+        "headers": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n \n}",
+            "form": []
+        }
+    }
+]
