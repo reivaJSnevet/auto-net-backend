@@ -16,4 +16,12 @@ export class UpdateProductDto {
   @IsNumber()
   @IsOptional()
   stock?: number;
+
+  @IsString()
+  @IsOptional()
+  imagenUrl?: string;
+
+  @IsString()
+  @IsOptional()
+  category?: string;
 }
