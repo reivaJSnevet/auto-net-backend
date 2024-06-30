@@ -3,8 +3,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { APP_PIPE } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
+import { APP_GUARD } from '@nestjs/core';
+import { RolesGuard } from './guards/roles.guard';
 
 @Module({
   imports: [
@@ -24,15 +24,8 @@ import { ValidationPipe } from '@nestjs/common';
   controllers: [],
   providers: [
     {
-      provide: APP_PIPE,
-      useClass: ValidationPipe,
-      useFactory: () => {
-        return new ValidationPipe({
-          whitelist: true,
-          forbidNonWhitelisted: true,
-          transform: true,
-        });
-      },
+      provide: APP_GUARD,
+      useClass: RolesGuard,
     },
   ],
 })
