@@ -12,23 +12,25 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async validateUser(
-    email: string,
-    password: string,
-  ): Promise<Partial<User> | null> {
+  async validateUser(email: string, password: string): Promise<Partial<User>> {
     const user = await this.userService.getUserByEmail(email);
-    if (user && (await compare(password, user.password))) {
-      return user;
+
+    if (!user) {
+      return new UnauthorizedException('User not found');
     }
-    return null;
+
+    const isValidPassword = await compare(password, user.password);
+    if (!isValidPassword) {
+      return new UnauthorizedException('Invalid password');
+    }
+
+    return user;
   }
 
-  async login(user: User): Promise<{ accessToken: string }> {
+  async login(user: Partial<User>): Promise<{ accessToken: string }> {
     if (user) {
       const payload = { email: user.email, sub: user._id };
-      const accessToken = this.jwtService.sign(payload, {
-        expiresIn: '15m',
-      });
+      const accessToken = this.jwtService.sign(payload);
 
       return { accessToken };
     }
@@ -36,9 +38,18 @@ export class AuthService {
     throw new UnauthorizedException();
   }
 
+  private async hashPassword(password: string): Promise<string> {
+    const saltRounds = 10;
+    const salt = await genSalt(saltRounds);
+    return hash(password, salt);
+  }
+
   async register(user: CreateUserDto): Promise<User> {
-    const salt = await genSalt(10);
-    user.password = await hash(user.password, salt);
-    return this.userService.createUser(user);
+    try {
+      user.password = await this.hashPassword(user.password);
+      return this.userService.createUser(user);
+    } catch (error) {
+      throw error;
+    }
   }
 }
