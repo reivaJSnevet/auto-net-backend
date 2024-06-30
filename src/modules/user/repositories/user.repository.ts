@@ -13,11 +13,11 @@ export class UserRepository {
     return this.userModel.find().exec();
   }
 
-  async findById(id: string): Promise<User> {
+  async findById(id: string): Promise<User | undefined> {
     return this.userModel.findById(id).exec();
   }
 
-  async findByEmail(email: string): Promise<User> {
+  async findByEmail(email: string): Promise<User | undefined> {
     return this.userModel.findOne({ email }).exec();
   }
 
@@ -26,13 +26,16 @@ export class UserRepository {
     return createdUser.save();
   }
 
-  async update(id: string, updateUserDto: UpdateUserDto): Promise<User> {
+  async update(
+    id: string,
+    updateUserDto: UpdateUserDto,
+  ): Promise<User | undefined> {
     return this.userModel
       .findByIdAndUpdate(id, updateUserDto, { new: true })
       .exec();
   }
 
-  async delete(id: string): Promise<User> {
+  async delete(id: string): Promise<User | undefined> {
     return this.userModel.findByIdAndDelete(id).exec();
   }
 }
